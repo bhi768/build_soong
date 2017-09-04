@@ -87,8 +87,9 @@ type variableProperties struct {
 			Cflags   []string
 			Cppflags []string
 		}
+
 		// include candy variables
-		*android.Product_variables
+		Candy android.Product_variables
 
 	} `android:"arch_variant"`
 }
@@ -157,7 +158,7 @@ type productVariables struct {
 	Override_rs_driver *string `json:",omitempty"`
 
 	// include candy variables
-	*android.ProductVariables
+	Candy android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
