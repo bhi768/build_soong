@@ -139,7 +139,7 @@ func (stub *llndkStubDecorator) link(ctx ModuleContext, flags Flags, deps PathDe
 	return stub.libraryDecorator.link(ctx, flags, deps, objs)
 }
 
-func newLLndkStubLibrary() *Module {
+func NewLLndkStubLibrary() *Module {
 	module, library := NewLibrary(android.DeviceSupported)
 	library.BuildOnlyShared()
 	module.stl = nil
@@ -162,7 +162,7 @@ func newLLndkStubLibrary() *Module {
 }
 
 func llndkLibraryFactory() android.Module {
-	module := newLLndkStubLibrary()
+	module := NewLLndkStubLibrary()
 	android.InitAndroidArchModule(module, android.DeviceSupported, android.MultilibBoth)
 	return module
 }
