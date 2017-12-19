@@ -499,5 +499,5 @@ func (c *deviceConfig) CoverageEnabledForPath(path string) bool {
 }
 
 func (c *deviceConfig) ForcedShimLibs() string {
-	return String(c.config.ProductVariables.Slim.Linker_forced_shim_libs)
+	return String(c.config.ProductVariables.Candy.Linker_forced_shim_libs)
 }
